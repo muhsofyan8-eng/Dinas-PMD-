@@ -1,0 +1,7 @@
+{
+  "name": "DPMD Sulawesi Tenggara Portal",
+  "description": "Official portal for Dinas Pemberdayaan Masyarakat dan Desa Provinsi Sulawesi Tenggara, featuring AI-powered information assistant and real-time community updates.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
