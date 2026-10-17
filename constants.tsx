@@ -1,5 +1,5 @@
 
-import { NewsItem, ServiceItem } from './types';
+import { NewsItem, ServiceItem, AgendaItem, Announcement } from './types';
 
 export const COLORS = {
   primary: '#1e3a8a', // Deep Blue
@@ -27,11 +27,79 @@ export const ANNOUNCEMENTS = [
   "Pendaftaran Lomba Desa Tingkat Provinsi Telah Dibuka"
 ];
 
+export const ANNOUNCEMENT_LIST: Announcement[] = [
+  {
+    id: 1,
+    title: "Surat Edaran Gubernur Terkait Pemanfaatan Dana Desa Untuk Ketahanan Pangan 2024",
+    date: "28 Mei 2024",
+    category: "Surat Edaran",
+    isNew: true
+  },
+  {
+    id: 2,
+    title: "Pengumuman Hasil Seleksi Administrasi Lomba Desa Tingkat Provinsi Sultra",
+    date: "25 Mei 2024",
+    category: "Hasil Seleksi",
+    isNew: true
+  },
+  {
+    id: 3,
+    title: "Jadwal Pelaksanaan Bimbingan Teknis Siskeudes Versi 2.0.6",
+    date: "20 Mei 2024",
+    category: "Pemberitahuan",
+    isNew: false
+  },
+  {
+    id: 4,
+    title: "Keputusan Kepala Dinas Terkait Penetapan Desa Mandiri Tahun 2023",
+    date: "15 Mei 2024",
+    category: "SK Kadis",
+    isNew: false
+  },
+  {
+    id: 5,
+    title: "Undangan Rapat Koordinasi Percepatan Penyaluran BLT Dana Desa",
+    date: "10 Mei 2024",
+    category: "Undangan",
+    isNew: false
+  }
+];
+
 export const SERVICES: ServiceItem[] = [
   { id: 1, name: 'Prodeskel', description: 'Profil Desa dan Kelurahan Provinsi Sultra', icon: 'fa-database', link: '#' },
   { id: 2, name: 'Siskeudes', description: 'Sistem Keuangan Desa Terintegrasi', icon: 'fa-money-bill-wave', link: '#' },
   { id: 3, name: 'Sipades', description: 'Sistem Informasi Pengelolaan Aset Desa', icon: 'fa-box', link: '#' },
   { id: 4, name: 'E-Planning', description: 'Perencanaan Pembangunan Desa Digital', icon: 'fa-chart-line', link: '#' },
+];
+
+export const AGENDA_DATA: AgendaItem[] = [
+  {
+    id: 1,
+    title: 'Rapat Koordinasi Penyaluran Dana Desa Semester II',
+    date: '15 Juni 2024',
+    time: '09:00 - 13:00 WITA',
+    location: 'Aula Bahteramas Kantor Gubernur Sultra',
+    category: 'Rapat',
+    description: 'Sinkronisasi data realisasi penyaluran dana desa tahap I dan persiapan penyaluran tahap II bagi seluruh Kepala PMD Kabupaten/Kota.'
+  },
+  {
+    id: 2,
+    title: 'Workshop Digitalisasi Administrasi Desa',
+    date: '20 Juni 2024',
+    time: '08:30 - 16:00 WITA',
+    location: 'Hotel Plaza Kubra, Kendari',
+    category: 'Workshop',
+    description: 'Pelatihan intensif penggunaan aplikasi Prodeskel dan Siskeudes versi terbaru bagi operator desa terpilih.'
+  },
+  {
+    id: 3,
+    title: 'Sosialisasi Pembentukan BUMDes Bersama',
+    date: '25 Juni 2024',
+    time: '10:00 - 12:00 WITA',
+    location: 'Virtual via Zoom Meeting',
+    category: 'Sosialisasi',
+    description: 'Panduan tata cara pembentukan dan legalitas BUMDes Bersama untuk mengoptimalkan potensi ekonomi antar desa.'
+  }
 ];
 
 export const DUMMY_NEWS: NewsItem[] = [

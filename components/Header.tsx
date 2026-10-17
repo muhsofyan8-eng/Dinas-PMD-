@@ -9,6 +9,8 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: 'Beranda', to: '/' },
     { name: 'Profil', to: '/profile' },
+    { name: 'Agenda', to: '/agenda' },
+    { name: 'Pengumuman', to: '/announcements' },
     { name: 'Berita', to: '/news' },
     { name: 'Layanan', to: '/services' },
     { name: 'Galeri', to: '/gallery' },
@@ -54,13 +56,13 @@ const Header: React.FC = () => {
               </Link>
             </div>
             
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
               {navLinks.map((link) => (
                 <NavLink 
                   key={link.name} 
                   to={link.to} 
                   className={({ isActive }) => 
-                    `text-[11px] font-black uppercase tracking-tighter transition-all hover:text-blue-900 ${
+                    `text-[10px] xl:text-[11px] font-black uppercase tracking-tighter transition-all hover:text-blue-900 ${
                       isActive ? 'text-blue-900 border-b-2 border-amber-500 pb-1' : 'text-gray-500'
                     }`
                   }

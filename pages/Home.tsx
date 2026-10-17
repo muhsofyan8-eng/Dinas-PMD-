@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NewsSlider from '../components/NewsSlider';
-import { SERVICES, DUMMY_NEWS, ANNOUNCEMENTS, INFOGRAPHICS, VIDEOS, OFFICIAL_INFO } from '../constants';
+import { SERVICES, DUMMY_NEWS, ANNOUNCEMENTS, ANNOUNCEMENT_LIST, INFOGRAPHICS, VIDEOS, OFFICIAL_INFO } from '../constants';
 
 const Home: React.FC = () => {
   return (
@@ -150,6 +150,32 @@ const Home: React.FC = () => {
             </div>
 
             <div className="space-y-16">
+              {/* Official Announcements Widget */}
+              <div className="space-y-8">
+                <div className="flex items-center space-x-4 border-b-2 border-blue-900 pb-6">
+                  <div className="w-2 h-10 bg-amber-500 rounded-full"></div>
+                  <h2 className="text-blue-900 text-2xl font-black uppercase tracking-tighter">Pengumuman Terbaru</h2>
+                </div>
+                <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 space-y-6">
+                   {ANNOUNCEMENT_LIST.slice(0, 3).map((item) => (
+                     <Link key={item.id} to="/announcements" className="block group border-b border-gray-200 last:border-0 pb-4 last:pb-0 hover:bg-white transition-colors rounded-xl p-3 -mx-3">
+                        <div className="flex items-center space-x-2 mb-2">
+                           <span className="text-[8px] font-black uppercase tracking-widest bg-blue-900 text-white px-2 py-0.5 rounded">
+                             {item.category}
+                           </span>
+                           <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">{item.date}</span>
+                        </div>
+                        <h4 className="text-blue-950 group-hover:text-amber-600 font-black text-xs uppercase leading-tight tracking-tighter transition-colors line-clamp-2">
+                          {item.title}
+                        </h4>
+                     </Link>
+                   ))}
+                   <Link to="/announcements" className="w-full py-4 bg-blue-900 text-white rounded-xl text-[10px] font-black uppercase tracking-widest text-center block hover:bg-amber-500 hover:text-blue-950 transition-colors">
+                     Lihat Semua Pengumuman
+                   </Link>
+                </div>
+              </div>
+
               <div className="space-y-8">
                 <div className="flex items-center space-x-4 border-b-2 border-blue-900 pb-6">
                   <div className="w-2 h-10 bg-amber-500 rounded-full"></div>

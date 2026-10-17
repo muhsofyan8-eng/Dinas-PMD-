@@ -36,10 +36,11 @@ const Footer: React.FC = () => {
             <h3 className="font-bold text-lg mb-6 border-b border-blue-800 pb-2 uppercase tracking-tight text-amber-500">Navigasi Cepat</h3>
             <ul className="space-y-4 text-sm text-blue-200">
               <li><Link to="/profile" className="hover:text-white transition-colors">Visi & Misi</Link></li>
+              <li><Link to="/agenda" className="hover:text-white transition-colors">Agenda Kegiatan</Link></li>
+              <li><Link to="/announcements" className="hover:text-white transition-colors">Pengumuman Resmi</Link></li>
               <li><Link to="/data-desa" className="hover:text-white transition-colors">Data Desa Sultra</Link></li>
               <li><Link to="/regulations" className="hover:text-white transition-colors">Produk Hukum</Link></li>
               <li><Link to="/ppid" className="hover:text-white transition-colors">PPID Utama</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Kontak</Link></li>
             </ul>
           </div>
 

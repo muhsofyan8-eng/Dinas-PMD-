@@ -25,6 +25,8 @@ const Regulations = lazy(() => import('./pages/Regulations'));
 const DataDesa = lazy(() => import('./pages/DataDesa'));
 const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 const Gallery = lazy(() => import('./pages/Gallery'));
+const Agenda = lazy(() => import('./pages/Agenda'));
+const Announcements = lazy(() => import('./pages/Announcements'));
 
 const Loading = () => (
   <div className="flex items-center justify-center min-h-[60vh]">
@@ -56,6 +58,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/agenda" element={<Agenda />} />
+            <Route path="/announcements" element={<Announcements />} />
           </Routes>
         </Suspense>
       </main>
